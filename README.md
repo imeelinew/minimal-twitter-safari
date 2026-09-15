@@ -11,10 +11,9 @@ Minimal Twitter Fork 的 macOS Safari Web Extension 版本。项目由 Xcode 的
 ## 本地运行
 
 1. 用 Xcode 打开 `Minimal Twitter Safari/Minimal Twitter Safari.xcodeproj`。
-2. 分别选择 `Minimal Twitter Safari` 和 `Minimal Twitter Safari Extension` Target，在 **Signing & Capabilities** 中选择同一个开发团队。
-3. 选择 `Minimal Twitter Safari` Scheme 并运行。
-4. 在 Safari 的 **设置 → 扩展** 中启用 **Minimal Twitter Safari Extension**。
-5. 为 `x.com`、`twitter.com` 和 `mobile.twitter.com` 授予网站访问权限，然后刷新已有页面。
+2. 选择 `Minimal Twitter Safari` Scheme 并运行。项目已配置本机开发团队 `5Q5QT76MJU`。
+3. 在 Safari 的 **设置 → 扩展** 中启用 **Minimal Twitter Safari Extension**。
+4. 为 `x.com`、`twitter.com` 和 `mobile.twitter.com` 授予网站访问权限，然后刷新已有页面。
 
 扩展设置可通过 Safari 工具栏中的扩展按钮打开。
 

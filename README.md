@@ -32,7 +32,6 @@ xcodebuild \
   -project "Minimal Twitter Safari/Minimal Twitter Safari.xcodeproj" \
   -scheme "Minimal Twitter Safari" \
   -configuration Debug \
-  -derivedDataPath build/DerivedData \
   CODE_SIGNING_ALLOWED=NO \
   build
 ```

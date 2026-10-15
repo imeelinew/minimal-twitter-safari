@@ -4,9 +4,8 @@ set -euo pipefail
 
 repo_dir="${0:A:h:h}"
 project_path="$repo_dir/Minimal Twitter Safari/Minimal Twitter Safari.xcodeproj"
-derived_data="$repo_dir/build/Install"
-product="$derived_data/Build/Products/Release/Minimal Twitter Safari.app"
-extension_product="$derived_data/Build/Products/Release/Minimal Twitter Safari Extension.appex"
+product=$(python3 "$repo_dir/scripts/xcode-path.py" Release)
+extension_product="${product:h}/Minimal Twitter Safari Extension.appex"
 destination="/Applications/Minimal Twitter Safari.app"
 launch_services="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister"
 
@@ -15,7 +14,6 @@ xcodebuild \
   -project "$project_path" \
   -scheme "Minimal Twitter Safari" \
   -configuration Release \
-  -derivedDataPath "$derived_data" \
   build
 
 codesign --verify --deep --strict "$product"

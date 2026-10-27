@@ -1,31 +1,31 @@
 # Minimal Twitter Safari
 
-Minimal Twitter Fork 的 macOS Safari Web Extension 版本。项目由 Xcode 的 Safari Web Extension Converter 生成，扩展资源已复制到仓库中，不依赖原 Chrome 扩展目录运行。
+The macOS Safari Web Extension version of Minimal Twitter Fork. The project was generated with Xcode's Safari Web Extension Converter; extension resources are included in this repository and do not depend on the original Chrome extension directory at runtime.
 
-## 环境
+## Requirements
 
 - macOS
-- Xcode 27 或更高版本
-- Safari 15.4 或更高版本（Manifest V3，最低版本也已写入 Manifest）
+- Xcode 27 or later
+- Safari 15.4 or later (Manifest V3; the minimum version is also set in the manifest)
 
-## 本地运行
+## Run locally
 
-1. 用 Xcode 打开 `Minimal Twitter Safari/Minimal Twitter Safari.xcodeproj`。
-2. 选择 `Minimal Twitter Safari` Scheme 并运行。项目已配置本机开发团队 `5Q5QT76MJU`。
-3. 在 Safari 的 **设置 → 扩展** 中启用 **Minimal Twitter Safari Extension**。
-4. 为 `x.com`、`twitter.com` 和 `mobile.twitter.com` 授予网站访问权限，然后刷新已有页面。
+1. Open `Minimal Twitter Safari/Minimal Twitter Safari.xcodeproj` in Xcode.
+2. Select and run the `Minimal Twitter Safari` scheme. The project is configured with the local development team `5Q5QT76MJU`.
+3. Enable **Minimal Twitter Safari Extension** in Safari **Settings → Extensions**.
+4. Grant website access to `x.com`, `twitter.com`, and `mobile.twitter.com`, then refresh open pages.
 
-扩展设置可通过 Safari 工具栏中的扩展按钮打开。
+Open extension settings using its Safari toolbar button.
 
-## 结构
+## Structure
 
-- `Minimal Twitter Safari/Minimal Twitter Safari/`：macOS 宿主 App。
-- `Minimal Twitter Safari/Minimal Twitter Safari Extension/`：Safari Web Extension Target。
-- `Minimal Twitter Safari/Minimal Twitter Safari Extension/Resources/`：Manifest、内容脚本、设置页、样式和字体。
+- `Minimal Twitter Safari/Minimal Twitter Safari/`: macOS host app.
+- `Minimal Twitter Safari/Minimal Twitter Safari Extension/`: Safari Web Extension target.
+- `Minimal Twitter Safari/Minimal Twitter Safari Extension/Resources/`: manifest, content scripts, settings page, styles, and fonts.
 
-## 验证构建
+## Verify the build
 
-无需代码签名即可做本地编译检查：
+Check the local build without code signing:
 
 ```sh
 xcodebuild \
@@ -36,6 +36,6 @@ xcodebuild \
   build
 ```
 
-## 来源
+## Origin
 
-迁移自 `/Users/eli/Dev/minimal-twitter-fork/local-extension`，保留原项目 MIT 许可证。
+Migrated from `/Users/eli/Dev/minimal-twitter-fork/local-extension`; the original project's MIT license is retained.
